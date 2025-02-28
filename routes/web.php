@@ -32,6 +32,13 @@ Route::get('/products', function () {
     ]);
 });
 
+
+Route::get('/products/{id}', function ($id) { // Add $id parameter
+    return Inertia::render('products/product-details', [
+        'id' => $id, // Pass the ID to Inertia
+    ]);
+});
+
 Route::get('/dashboard', function () {
     return Inertia::render('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
