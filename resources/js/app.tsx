@@ -21,8 +21,8 @@ createInertiaApp({
         root.render(
             <ThemeProvider
                 attribute="class"
-                defaultTheme="system"
-                enableSystem
+                defaultTheme="light"
+                // enableSystem
                 disableTransitionOnChange
             >
                 <App {...props} />
