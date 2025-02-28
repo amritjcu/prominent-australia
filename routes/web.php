@@ -24,7 +24,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/contact', function () {
-    return Inertia::render('products/products');
+    return Inertia::render('contact');
 });
 
 
