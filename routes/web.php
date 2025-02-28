@@ -23,6 +23,11 @@ Route::get('/about', function () {
     ]);
 });
 
+Route::get('/contact', function () {
+    return Inertia::render('products/products');
+});
+
+
 Route::get('/products', function () {
     return Inertia::render('products/products', [
         'canLogin' => Route::has('login'),
