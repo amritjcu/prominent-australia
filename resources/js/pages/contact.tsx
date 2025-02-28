@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import CookieConsent from "@/components/ui/CookieConsent";
 import Contact from "@/components/contact";
 import SubHero from "@/components/subhero";
-import Image from "next/image";
 
 export default function ContactUs() {
     return (
@@ -23,7 +22,7 @@ export default function ContactUs() {
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-center gap-6 md:gap-8 lg:gap-12">
                     <div className="aspect-w-16 aspect-h-6 lg:aspect-h-14 overflow-hidden bg-gray-100 rounded-2xl">
-                        <Image
+                        <img
                             width={560}
                             height={315}
                             className="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-2xl"
