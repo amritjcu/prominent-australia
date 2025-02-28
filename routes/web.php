@@ -23,6 +23,22 @@ Route::get('/about', function () {
     ]);
 });
 
+Route::get('/products', function () {
+    return Inertia::render('products/products', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
+});
+
+
+Route::get('/products/{id}', function ($id) { // Add $id parameter
+    return Inertia::render('products/product-details', [
+        'id' => $id, // Pass the ID to Inertia
+    ]);
+});
+
 Route::get('/dashboard', function () {
     return Inertia::render('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
