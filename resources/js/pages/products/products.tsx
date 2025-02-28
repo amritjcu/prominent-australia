@@ -7,7 +7,7 @@ import Contact from "@/components/contact";
 import SubHero from "@/components/subhero";
 import ProductList from "@/components/product-list";
 
-export default function Products() {
+export default function products() {
     return (
         <div>
             {/* ========== HEADER ========== */}

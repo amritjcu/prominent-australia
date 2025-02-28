@@ -3,17 +3,16 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Product } from "@/store/product";
-import { useRouter } from "next/navigation";
+import { router } from "@inertiajs/react";
 
 interface ProductCardProps {
     product: Product;
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
-    const router = useRouter();
-
+    // const router = useRouter();
     const handleClick = () => {
-        router.push(`/products/${product.id}`);
+        router.visit(`/products/${product.id}`);
     };
 
     return (
