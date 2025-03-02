@@ -45,7 +45,10 @@ Route::get('/products', function () {
     ]);
 });
 
-Route::resource('/admin/products', ProductController::class);
+Route::resource('/api/products', ProductController::class);
+Route::get('/admin/products', function () {
+    return Inertia::render('cart');
+});
 
 
 Route::get('/products/{id}', function ($id) { // Add $id parameter
