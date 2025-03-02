@@ -2,6 +2,9 @@ import { Link, Head } from "@inertiajs/react";
 import { PageProps } from "@/types";
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
+import Contact from "@/components/contact";
+import Footer from "@/components/Footer";
+import CookieConsent from "@/components/ui/CookieConsent";
 
 export default function Welcome({
     auth,
