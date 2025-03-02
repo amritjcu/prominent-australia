@@ -47,7 +47,7 @@ Route::get('/products', function () {
 
 Route::resource('/api/products', ProductController::class);
 Route::get('/admin/products', function () {
-    return Inertia::render('cart');
+    return Inertia::render('admin/products');
 });
 
 
