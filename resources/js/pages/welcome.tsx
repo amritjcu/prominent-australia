@@ -1,5 +1,6 @@
 import { Link, Head } from "@inertiajs/react";
 import { PageProps } from "@/types";
+import Navbar from "@/components/navbar";
 
 export default function Welcome({
     auth,
