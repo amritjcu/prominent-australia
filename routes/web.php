@@ -31,6 +31,10 @@ Route::get('/about', function () {
     return Inertia::render('about');
 });
 
+Route::get('/cart', function () {
+    return Inertia::render('cart');
+});
+
 Route::get('/products', function () {
     return Inertia::render('products/products', [
         'canLogin' => Route::has('login'),
