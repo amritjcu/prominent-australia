@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -43,6 +44,8 @@ Route::get('/products', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+
+Route::resource('/admin/products', ProductController::class);
 
 
 Route::get('/products/{id}', function ($id) { // Add $id parameter
