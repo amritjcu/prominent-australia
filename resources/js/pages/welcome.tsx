@@ -613,11 +613,10 @@ export default function Welcome({
                             href="#"
                         >
                             <div className="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
-                                <Image
+                                <img
                                     className="size-full absolute top-0 start-0 object-cover group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl"
                                     src="https://images.unsplash.com/photo-1542125387-c71274d94f0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
                                     alt="Blog Image"
-                                    layout="fill"
                                 />
                             </div>
                             <div className="mt-7">
