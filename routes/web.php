@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -56,6 +57,9 @@ Route::get('/products/{id}', function ($id) { // Add $id parameter
         'id' => $id, // Pass the ID to Inertia
     ]);
 });
+
+// Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');
+Route::post('/contacts', [ContactController::class, 'store'])->name('contacts.store');
 
 Route::get('/dashboard', function () {
     return Inertia::render('dashboard');
