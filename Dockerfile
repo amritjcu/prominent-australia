@@ -1,5 +1,5 @@
 # Use official PHP image with required extensions
-FROM php:8.2-fpm
+FROM php:8.3-fpm
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -21,14 +21,22 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Set working directory
 WORKDIR /var/www/html
 
-# Copy project files
+# Copy composer files first (for caching)
+COPY composer.json composer.lock ./
+
+# Install dependencies (including dev dependencies for development mode)
+RUN composer install --no-scripts --no-autoloader
+
+# Copy the rest of the application code
 COPY . .
 
-# Install dependencies
-RUN composer install --no-dev --optimize-autoloader
+# Generate optimized autoload files
+RUN composer dump-autoload
 
-# Set permissions
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+# Fix permissions
+RUN chown -R www-data:www-data /var/www/html \
+    && chmod -R 775 /var/www/html/storage \
+    && chmod -R 775 /var/www/html/bootstrap/cache
 
 # Expose port
 EXPOSE 9000
