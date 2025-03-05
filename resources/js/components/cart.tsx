@@ -6,11 +6,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Trash2, ShoppingBag } from "lucide-react";
 import { formatPrice } from "@/lib/utils";
 import { useCartStore } from "@/store/cart";
-import { useRouter } from "next/navigation";
+import { router } from "@inertiajs/react";
 
 export default function CartList() {
     const { items, removeItem, updateQuantity, total } = useCartStore();
-    const navigate = useRouter();
 
     if (items.length === 0) {
         return (
@@ -22,7 +21,7 @@ export default function CartList() {
                 <p className="mb-4 text-muted-foreground">
                     Add some products to your cart and they will show up here
                 </p>
-                <Button onClick={() => navigate.push("/products")}>
+                <Button onClick={() => router.visit("/products")}>
                     Continue Shopping
                 </Button>
             </div>
@@ -116,7 +115,7 @@ export default function CartList() {
                                     <Button
                                         className="mt-6 w-full"
                                         onClick={() =>
-                                            navigate.push("/checkout")
+                                            router.visit("/checkout")
                                         }
                                     >
                                         Proceed to Checkout
