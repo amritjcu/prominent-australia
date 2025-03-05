@@ -6,17 +6,16 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, ShoppingCart } from "lucide-react";
 // import { useToast } from "@/components/hooks/use-toast";
 import { getProduct } from "@/lib/api";
-import { useParams, useRouter } from "next/navigation";
 import { useCartStore } from "@/store/cart";
 import { Product } from "@/store/product";
+import { router, usePage } from "@inertiajs/react";
 
 export default function ProductDetail() {
-    const { id } = useParams();
+    const { id } = usePage().props;
     const productId = id ?? "";
     const [product, setProduct] = useState<Product | null>(null);
     const [loading, setLoading] = useState(true);
-    const navigate = useRouter();
-    // const { toast } = useToast();
+
     const addItem = useCartStore((state) => state.addItem);
 
     useEffect(() => {
@@ -45,7 +44,7 @@ export default function ProductDetail() {
             //   title: "Success",
             //   description: "Product added to cart",
             // });
-            navigate.push("/cart");
+            router.visit("/cart");
         }
     };
 
@@ -62,7 +61,7 @@ export default function ProductDetail() {
             <Button
                 variant="ghost"
                 className="mb-6"
-                onClick={() => navigate.back()}
+                onClick={() => window.history.back()}
             >
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Products
