@@ -28,8 +28,15 @@ export default function Form({ product, submitUrl, method }: Props) {
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
-        if (method === "post") router.post(submitUrl, values);
-        else router.put(submitUrl, values);
+        const payload: Record<string, any> = {
+            id: values.id,
+            title: values.title,
+            description: values.description,
+            price: values.price.toString(), // Convert number to string
+            thumbnail: values.thumbnail,
+        };
+        if (method === "post") router.post(submitUrl, payload);
+        else router.put(submitUrl, payload);
     };
 
     return (
