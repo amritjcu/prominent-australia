@@ -1,20 +1,27 @@
 # Use Node.js official image
-FROM node:18-alpine
+FROM node:18-alpine AS builder
 
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
+# Copy package.json and install dependencies
 COPY package.json package-lock.json ./
-
-# Install dependencies (including dev dependencies)
-RUN npm install
+RUN npm ci
 
 # Copy the frontend source code
 COPY . .
 
-# Expose port for Vite development server
-EXPOSE 5173
+# Build the production files
+RUN npm run build
 
-# Start Vite in development mode
-CMD ["npm", "run", "dev"]
+# Serve with a lightweight web server
+FROM nginx:latest AS production
+
+# Copy the built files from the builder stage
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Expose the default port
+EXPOSE 80
+
+# Start Nginx server
+CMD ["nginx", "-g", "daemon off;"]
