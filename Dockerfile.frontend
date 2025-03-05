@@ -14,14 +14,7 @@ COPY . .
 # Build the production files
 RUN npm run build
 
-# Serve with a lightweight web server
-FROM nginx:latest AS production
 
-# Copy the built files from the builder stage
-COPY --from=builder /app/dist /usr/share/nginx/html
+# Expose a port (for Vite if needed)
+EXPOSE 5173
 
-# Expose the default port
-EXPOSE 80
-
-# Start Nginx server
-CMD ["nginx", "-g", "daemon off;"]
