@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ColumnDef } from "@tanstack/react-table";
 import {
   Table,
   TableBody,
@@ -36,7 +35,7 @@ export default function UsersPage() {
       });
   }, []);
 
-  if (loading) return <div className="p-4">Loading...</div>;
+  // if (loading) return <div className="p-4">Loading...</div>;
 
   return (
     <div className="container w-full mx-auto py-8">

@@ -18,7 +18,7 @@ model User {
   email    String  @unique
   role     String   @default("user")
   password String
-  name     String?
+  name     String
 }
 
 model Contact {
