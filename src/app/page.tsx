@@ -8,7 +8,9 @@ import Hero from "@/components/hero";
 import Contact from "@/components/contact";
 import Image from "next/image";
 import Link from "next/link";
-import Map from "@/components/map";
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("@/components/map"), { ssr: false });
 
 export default function Home() {
   useEffect(() => {

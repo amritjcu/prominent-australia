@@ -5,8 +5,9 @@ import Footer from "@/components/Footer";
 import CookieConsent from "@/components/ui/CookieConsent";
 import Contact from "@/components/contact";
 import SubHero from "@/components/subhero";
-import Image from "next/image";
-import Map from "@/components/map";
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("@/components/map"), { ssr: false });
 
 export default function ContactUs() {
   return (
