@@ -8,6 +8,7 @@ import Hero from "@/components/hero";
 import Contact from "@/components/contact";
 import Image from "next/image";
 import Link from "next/link";
+import Map from "@/components/map";
 
 export default function Home() {
   useEffect(() => {
@@ -605,6 +606,20 @@ export default function Home() {
         {/* End Grid */}
       </div>
       {/* End Card Blog */}
+      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-16 mx-auto">
+        {/* Title */}
+        <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+          <h2 className="text-2xl font-bold md:text-4xl md:leading-tight">
+            Find Us
+          </h2>
+          <h2 className="text-lg mt-3 md:leading-tight">
+            Visit Us In Person To See Our Products.
+          </h2>
+        </div>
+        <div>
+          <Map />
+        </div>
+      </div>
       {/* Contact Us */}
       <Contact
         title="Send An Inquiry"
