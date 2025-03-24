@@ -157,7 +157,7 @@ const Navbar = () => {
                 {userName ? (
                   <button
                     onClick={handleLogout}
-                    className="bg-red-500 inline-flex items-center gap-x-2 text-white px-6 py-2 rounded-md hover:bg-red-600"
+                    className="bg-yellow-500 inline-flex items-center gap-x-2 text-white px-6 py-2 rounded-md hover:bg-red-600"
                   >
                     Logout
                   </button>
@@ -224,12 +224,23 @@ const Navbar = () => {
               </li>
             </ul>
             <div className="flex lg:items-center justify-start flex-col lg:flex-row max-lg:gap-4 lg:flex-1 lg:justify-end">
-              <Link
-                href="/login"
-                className="bg-red-500 text-white rounded-full cursor-pointer font-normal text-center shadow-xs transition-all duration-500 py-3 px-6 text-sm lg:ml-5 hover:bg-red-700"
-              >
-                Login
-              </Link>
+              {userName ? (
+                <button
+                  onClick={handleLogout}
+                  className="bg-yellow-500 inline-flex items-center justify-center text-center gap-x-2 text-white px-6 py-2 rounded-full hover:bg-red-600"
+                >
+                  Logout
+                </button>
+              ) : (
+                <button className="bg-red-500 inline-flex items-center justify-center  text-center gap-x-2 text-white px-6 py-2 rounded-full hover:bg-red-600">
+                  <Link
+                    href="/login"
+                    className="inline-flex items-center gap-x-2"
+                  >
+                    Login
+                  </Link>
+                </button>
+              )}
             </div>
           </div>
           {/* End Collapse */}

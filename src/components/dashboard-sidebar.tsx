@@ -1,14 +1,13 @@
 "use client";
 
 import {
-  BarChart3,
   Package,
   ShoppingCart,
   Users,
   Home,
-  Settings,
   LogOut,
   Search,
+  Users2,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -57,6 +56,12 @@ export function DashboardSidebar() {
       icon: ShoppingCart,
       href: "/dashboard/orders",
       isActive: pathname === "/orders",
+    },
+    {
+      title: "Users",
+      icon: Users2,
+      href: "/dashboard/users",
+      isActive: pathname === "/users",
     },
   ];
 

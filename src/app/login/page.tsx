@@ -35,8 +35,27 @@ export default function Login() {
     });
 
     if (res.ok) {
-      router.push("/dashboard");
+      fetchUser();
     } else setError("Invalid credentials");
+  }
+
+  async function fetchUser() {
+    try {
+      const res = await fetch("/api/user", { credentials: "include" });
+
+      if (!res.ok) {
+        throw new Error("Failed to fetch user data");
+      }
+
+      const data = await res.json();
+      if (data.role === "admin") {
+        window.location.href = "/dashboard";
+      } else {
+        window.location.href = "/checkout";
+      }
+    } catch (error) {
+      console.error("Error fetching user:", error);
+    }
   }
 
   return (

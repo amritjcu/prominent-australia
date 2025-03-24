@@ -30,4 +30,5 @@ export function getAuthUser() {
 
 export function logout() {
   cookies().set("auth_token", "", { maxAge: 0 });
+  // window.location.href = "/";
 }

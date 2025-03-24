@@ -3,7 +3,7 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/Footer";
 import { X, CreditCard, ShieldCheck } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -24,6 +24,27 @@ export default function Checkout() {
   );
   const [email, setEmail] = useState("customer@example.com");
   const [agreed, setAgreed] = useState(false);
+
+  async function fetchUser() {
+    try {
+      const res = await fetch("/api/user", { credentials: "include" });
+
+      if (!res.ok) {
+        throw new Error("Failed to fetch user data");
+      }
+
+      const data = await res.json();
+      if (data.email) {
+        setEmail(data.email);
+      }
+    } catch (error) {
+      console.error("Error fetching user:", error);
+    }
+  }
+
+  useEffect(() => {
+    fetchUser();
+  }, []);
 
   return (
     <div>
