@@ -16,7 +16,7 @@ const PaystackCheckout = ({
 
   const publicKey = "pk_test_6fbd24a2dc3e96dba0ebdd93e878b61a725e681e";
   const [paying, setPaying] = useState(false);
-  const { items } = useCartStore();
+  const { items, clearCart } = useCartStore();
   const total = items.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
@@ -25,6 +25,7 @@ const PaystackCheckout = ({
   const handleSuccess = (response: any) => {
     console.log("Payment Success:", response);
     handlePayment();
+    clearCart();
     navigate.push("/success");
   };
 

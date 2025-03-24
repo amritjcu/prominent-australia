@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="col-span-full hidden lg:col-span-1 lg:block">
           <Link
             className="flex-none font-semibold text-xl text-red-600 focus:outline-none focus:opacity-80"
-            href="#"
+            href="/"
             aria-label="Brand"
           >
             <Image
@@ -36,7 +36,7 @@ const Footer = () => {
             <p>
               <Link
                 className="inline-flex gap-x-2 text-gray-600 hover:text-red-500 focus:outline-none focus:text-gray-800"
-                href="#"
+                href="/products"
               >
                 Heat Resistance Powder Upto 650° C
               </Link>
@@ -44,7 +44,7 @@ const Footer = () => {
             <p>
               <Link
                 className="inline-flex gap-x-2 text-gray-600 hover:text-red-500 focus:outline-none focus:text-gray-800"
-                href="#"
+                href="/products"
               >
                 Custom color manufacturer
               </Link>
@@ -52,7 +52,7 @@ const Footer = () => {
             <p>
               <Link
                 className="inline-flex gap-x-2 text-gray-600 hover:text-red-500 focus:outline-none focus:text-gray-800"
-                href="#"
+                href="/products"
               >
                 Epoxy Powder
               </Link>
@@ -60,7 +60,7 @@ const Footer = () => {
             <p>
               <Link
                 className="inline-flex gap-x-2 text-gray-600 hover:text-red-500 focus:outline-none focus:text-gray-800"
-                href="#"
+                href="/products"
               >
                 Epoxy Polyester Powder
               </Link>
@@ -68,7 +68,7 @@ const Footer = () => {
             <p>
               <Link
                 className="inline-flex gap-x-2 text-gray-600 hover:text-red-500 focus:outline-none focus:text-gray-800"
-                href="#"
+                href="/products"
               >
                 Polyurethane Powder
               </Link>
@@ -76,7 +76,7 @@ const Footer = () => {
             <p>
               <Link
                 className="inline-flex gap-x-2 text-gray-600 hover:text-red-500 focus:outline-none focus:text-gray-800"
-                href="#"
+                href="/products"
               >
                 Pure Polyester Powder
               </Link>
@@ -91,7 +91,7 @@ const Footer = () => {
             <p>
               <Link
                 className="inline-flex gap-x-2 text-gray-600 hover:text-red-500 focus:outline-none focus:text-gray-800"
-                href="#"
+                href="/about"
               >
                 About Us
               </Link>
@@ -99,7 +99,7 @@ const Footer = () => {
             <p>
               <Link
                 className="inline-flex gap-x-2 text-gray-600 hover:text-red-500 focus:outline-none focus:text-gray-800"
-                href="#"
+                href="/products"
               >
                 Powder Shades
               </Link>
@@ -107,7 +107,7 @@ const Footer = () => {
             <p>
               <Link
                 className="inline-flex gap-x-2 text-gray-600 hover:text-red-500 focus:outline-none focus:text-gray-800"
-                href="#"
+                href="/contacts"
               >
                 Contact Us
               </Link>
@@ -123,7 +123,7 @@ const Footer = () => {
             <p>
               <Link
                 className="inline-flex gap-x-2 text-gray-600 hover:text-red-500 focus:outline-none focus:text-gray-800"
-                href="#"
+                href="/contact"
               >
                 1300 182 099 / +61455985394
               </Link>
@@ -131,7 +131,7 @@ const Footer = () => {
             <p>
               <Link
                 className="inline-flex gap-x-2 text-gray-600 hover:text-red-500 focus:outline-none focus:text-gray-800"
-                href="#"
+                href="/contact"
               >
                 support@prominentaustralia.com.au
               </Link>
@@ -139,7 +139,7 @@ const Footer = () => {
             <p>
               <Link
                 className="inline-flex gap-x-2 text-gray-600 hover:text-red-500 focus:outline-none focus:text-gray-800"
-                href="#"
+                href="/contact"
               >
                 1024 Ann Street, Fortitude Valley Queensland 4006
               </Link>

@@ -543,7 +543,7 @@ export default function Home() {
         <div className="mt-8 gap-3 flex justify-center">
           <Link
             className="px-12 inline-flex justify-center items-center gap-x-3 text-center bg-red-600 text-white text-sm font-medium rounded-md focus:outline-none focus:from-violet-600 focus:to-red-600 py-3 "
-            href="#"
+            href="/products"
           >
             Buy Now
           </Link>
@@ -570,9 +570,10 @@ export default function Home() {
             <div className="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
               <Image
                 className="size-full absolute top-0 start-0 object-cover group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl"
-                src="https://images.unsplash.com/photo-1542125387-c71274d94f0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
-                alt="Blog Image"
+                src="/images/product1.jpg"
+                alt="Woodland Grey"
                 layout="fill"
+                loading="lazy"
               />
             </div>
             <div className="mt-7">
@@ -591,9 +592,10 @@ export default function Home() {
             <div className="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
               <Image
                 className="size-full absolute top-0 start-0 object-cover group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl"
-                src="https://images.unsplash.com/photo-1542125387-c71274d94f0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
-                alt="Blog Image"
+                src="/images/product2.jpg"
+                alt="Antique Silver"
                 layout="fill"
+                loading="lazy"
               />
             </div>
             <div className="mt-7">

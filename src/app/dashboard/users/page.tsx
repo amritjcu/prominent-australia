@@ -49,7 +49,7 @@ export default function UsersPage() {
         <Table>
           <TableHeader>
             <TableRow>
-              {/* <TableHead>Name</TableHead> */}
+              <TableHead>Name</TableHead>
               <TableHead>Email</TableHead>
               <TableHead>Role</TableHead>
               <TableHead>Created At</TableHead>
@@ -58,7 +58,7 @@ export default function UsersPage() {
           <TableBody>
             {users.map((user) => (
               <TableRow key={user.id}>
-                {/* <TableCell>{user.name}</TableCell> */}
+                <TableCell>{user.name}</TableCell>
                 <TableCell>{user.email}</TableCell>
                 <TableCell>{user.role}</TableCell>
                 <TableCell>{new Date().toLocaleDateString()}</TableCell>

@@ -5,7 +5,7 @@ import { prisma } from "@/lib/prisma"; // Make sure prisma is imported
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { email, password } = body;
+    const { email, password, name } = body;
 
     // ✅ Check if email and password are provided
     if (!email || !password) {
@@ -23,6 +23,7 @@ export async function POST(req: Request) {
     const user = await prisma.user.create({
       data: {
         email,
+        name: name,
         password: hashedPassword, // Store hashed password
       },
     });

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 const Hero = () => {
   return (
@@ -48,9 +49,9 @@ const Hero = () => {
             </div>
             {/* Buttons */}
             <div className="mt-8 gap-3 flex justify-center">
-              <a
+              <Link
                 className="py-3 px-12 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-red-600 text-white hover:bg-red-700 focus:outline-none focus:bg-red-700 disabled:opacity-50 disabled:pointer-events-none"
-                href="#"
+                href="/products"
               >
                 Buy Now
                 <svg
@@ -67,7 +68,7 @@ const Hero = () => {
                 >
                   <path d="m9 18 6-6-6-6" />
                 </svg>
-              </a>
+              </Link>
             </div>
             {/* End Buttons */}
             <div className="flex justify-center mt-8 space-x-2">
